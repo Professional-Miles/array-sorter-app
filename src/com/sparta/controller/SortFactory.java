@@ -2,8 +2,10 @@ package com.sparta.controller;
 
 public interface SortFactory {
 
-    public void setSortType(char type);
+    public void setSortType(String type);
 
-    public void arraySorter(int[] numbers, char type);
+    public String getSortType();
+
+    public int[] arraySorter(int[] numbers, String type);
 
 }

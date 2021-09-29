@@ -6,28 +6,35 @@ import com.sparta.sorts.QuickSort;
 
 public class SorterFactory implements SortFactory{
 
-    private char sorterType;
+    private String sorterType;
 
     @Override
-    public void setSortType(char type) {
+    public void setSortType(String type) {
         this.sorterType = type;
     }
 
     @Override
-    public void arraySorter(int[] numbers, char type) {
+    public String getSortType() {
+        return this.sorterType;
+    }
+
+
+    @Override
+    public int[] arraySorter(int[] numbers, String type) {
         switch (type) {
-            case 'b':
+            case "b":
                 BubbleSort sorterB = new BubbleSort();
                 sorterB.sort(numbers);
                 break;
-            case 'm':
+            case "m":
                 MergeSort sorterM = new MergeSort();
                 sorterM.sort(numbers);
                 break;
-            case 'q':
+            case "q":
                 QuickSort sorterQ = new QuickSort();
                 sorterQ.sort(numbers);
                 break;
         }
+        return numbers;
     }
 }

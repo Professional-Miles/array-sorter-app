@@ -1,6 +1,8 @@
 package com.sparta.controller;
 
-public class theArray implements ArrayMaker{
+import java.util.Arrays;
+
+public class TheArray implements ArrayMaker{
 
     private int arraynum;
 
@@ -21,6 +23,7 @@ public class theArray implements ArrayMaker{
         for(int i = 0; i <  theArray.length; i++) {
             theArray[i] = (int)(Math.random() * 100);
         }
+
         return theArray;
     }
 }
