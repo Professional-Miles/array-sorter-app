@@ -64,12 +64,12 @@ public class UserResults {
 
     @Override
     public String toString() {
-        return "UserResults{" +
-                "sortType='" + sortType + '\'' +
-                ", arraySize=" + arraySize +
-                ", originalArray=" + Arrays.toString(originalArray) +
-                ", sortedArray=" + Arrays.toString(sortedArray) +
-                ", sortTime=" + sortTime +
-                '}';
+        return "UserResults: { " +
+                "Sort Used = '" + sortType + '\'' +
+                ", Size of Array = " + arraySize +
+                ", Original Array = " + Arrays.toString(originalArray) +
+                ", Sorted Array = " + Arrays.toString(sortedArray) +
+                ", Time taken to sort (Nano Seconds) = " + sortTime +
+                "ns }";
     }
 }
