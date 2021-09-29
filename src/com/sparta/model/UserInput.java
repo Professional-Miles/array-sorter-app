@@ -1,4 +1,4 @@
-package com.sparta.theviews;
+package com.sparta.model;
 
 public class UserInput {
 

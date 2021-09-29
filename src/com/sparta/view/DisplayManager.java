@@ -1,8 +1,10 @@
-package com.sparta.theviews;
+package com.sparta.view;
+
+import com.sparta.model.UserInput;
 
 import java.util.Scanner;
 
-public class Display {
+public class DisplayManager {
 
     public static void main(String[] args) {
 

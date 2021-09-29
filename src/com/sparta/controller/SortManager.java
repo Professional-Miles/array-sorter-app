@@ -4,7 +4,7 @@ import com.sparta.model.BubbleSort;
 import com.sparta.model.MergeSort;
 import com.sparta.model.QuickSort;
 
-public class SorterFactory implements SortFactory{
+public class SortManager implements SortFactory{
 
     private String sorterType;
 

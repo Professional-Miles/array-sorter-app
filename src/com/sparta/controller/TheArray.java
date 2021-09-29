@@ -20,6 +20,7 @@ public class TheArray implements ArrayMaker{
     }
 
     public void setArrayNum(int arrayNum) {
+
         this.arrayNum = arrayNum;
     }
 
