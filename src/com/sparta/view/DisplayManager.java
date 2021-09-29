@@ -25,10 +25,8 @@ public class DisplayManager {
         factory.sizeResult();
         factory.arrayOriginalResult();
         factory.arraySorterResult();
-
+        factory.timerResult();
         System.out.println(result.toString());
-
-
 
     }
 

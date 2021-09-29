@@ -8,6 +8,25 @@ public class SortManager implements SortFactory{
 
     private String sorterType;
 
+    private long startTimer;
+    private long stopTimer;
+
+    public long getStartTimer() {
+        return startTimer;
+    }
+
+    public void setStartTimer(long startTimer) {
+        this.startTimer = startTimer;
+    }
+
+    public long getStopTimer() {
+        return stopTimer;
+    }
+
+    public void setStopTimer(long stopTimer) {
+        this.stopTimer = stopTimer;
+    }
+
     public String getSorterType() {
         return sorterType;
     }
@@ -21,15 +40,21 @@ public class SortManager implements SortFactory{
         switch (type) {
             case "b":
                 BubbleSort sorterB = new BubbleSort();
+                setStartTimer(System.nanoTime());
                 sorterB.sort(numbers);
+                setStopTimer(System.nanoTime());
                 break;
             case "m":
                 MergeSort sorterM = new MergeSort();
+                setStartTimer(System.nanoTime());
                 sorterM.sort(numbers);
+                setStopTimer(System.nanoTime());
                 break;
             case "q":
                 QuickSort sorterQ = new QuickSort();
+                setStartTimer(System.nanoTime());
                 sorterQ.sort(numbers);
+                setStopTimer(System.nanoTime());
                 break;
         }
         return numbers;

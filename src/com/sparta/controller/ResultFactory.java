@@ -9,6 +9,7 @@ public class ResultFactory {
     UserInput input = UserInput.getInstance();
     UserResults result = UserResults.getInstance();
     TheArray arrayTemp = new TheArray();
+    SortManager sorter = new SortManager();
 
 
     public void setTypeResult(){
@@ -40,8 +41,11 @@ public class ResultFactory {
     }
 
     public void arraySorterResult(){
-        SortManager sorter = new SortManager();
         result.setSortedArray(sorter.arraySorter(arrayTemp.getThisArray(), input.getSortType()));
+    }
+
+    public void timerResult(){
+        result.setSortTime(sorter.getStopTimer() - sorter.getStartTimer());
     }
 
 
