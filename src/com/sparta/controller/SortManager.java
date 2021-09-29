@@ -7,7 +7,6 @@ import com.sparta.model.QuickSort;
 public class SortManager implements SortFactory{
 
     private String sorterType;
-
     private long startTimer;
     private long stopTimer;
 
@@ -56,6 +55,9 @@ public class SortManager implements SortFactory{
                 sorterQ.sort(numbers);
                 setStopTimer(System.nanoTime());
                 break;
+            default:
+                System.err.println("You didn't pass a valid input! Please try again...");
+                System.exit(0);
         }
         return numbers;
     }

@@ -4,6 +4,8 @@ import com.sparta.controller.ResultFactory;
 import com.sparta.model.UserInput;
 import com.sparta.model.UserResults;
 
+import java.util.InputMismatchException;
+import java.lang.NegativeArraySizeException;
 import java.util.Scanner;
 
 public class DisplayManager {
@@ -18,12 +20,24 @@ public class DisplayManager {
         System.out.print("Enter sort type b, m, q: ");
         input.setSortType(scanner.nextLine());
 
-        System.out.print("Enter number of ints to sort: ");
-        input.setArraySize(scanner.nextInt());
+        try {
+            System.out.print("Enter number of int(s) to sort: ");
+            input.setArraySize(scanner.nextInt());
+        } catch (InputMismatchException i) {
+            System.err.println("Wrong input type! Please try again...");
+            System.exit(0);
+        }
 
         factory.setTypeResult();
         factory.sizeResult();
-        factory.arrayOriginalResult();
+
+        try {
+            factory.arrayOriginalResult();
+        } catch (NegativeArraySizeException n) {
+            System.err.println("Negative number input! Please try again...");
+            System.exit(0);
+        }
+
         factory.arraySorterResult();
         factory.timerResult();
         System.out.println(result.toString());

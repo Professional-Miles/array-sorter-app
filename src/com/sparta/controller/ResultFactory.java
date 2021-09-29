@@ -27,7 +27,13 @@ public class ResultFactory {
     }
 
     public void sizeResult(){
-        result.setArraySize(input.getArraySize());
+        if (input.getArraySize() == 0){
+            System.err.println("You input zero(0)! Please try again...");
+            System.exit(0);
+        } else {
+            result.setArraySize(input.getArraySize());
+        }
+
     }
 
     public void arrayOriginalResult(){
