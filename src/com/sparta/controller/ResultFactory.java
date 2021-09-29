@@ -8,16 +8,7 @@ public class ResultFactory {
 
     UserInput input = UserInput.getInstance();
     UserResults result = UserResults.getInstance();
-    private int[] tempArray;
-
-    public int[] getTempArray() {
-        return tempArray;
-    }
-
-    public void setTempArray(int[] tempArray) {
-        this.tempArray = tempArray;
-    }
-
+    TheArray arrayTemp = new TheArray();
 
 
     public void setTypeResult(){
@@ -39,16 +30,18 @@ public class ResultFactory {
     }
 
     public void arrayOriginalResult(){
-        TheArray arrayTemp = new TheArray();
+
         arrayTemp.setArrayNum(input.getArraySize());
         arrayTemp.arrayMade();
-        tempArray = arrayTemp.getThisArray();
-        result.setOriginalArray(tempArray);
+        int[] tempArray = arrayTemp.getThisArray();
+        int[] tempArrayCopy = new int[input.getArraySize()];
+        System.arraycopy(tempArray, 0, tempArrayCopy, 0, input.getArraySize());
+        result.setOriginalArray(tempArrayCopy);
     }
 
     public void arraySorterResult(){
         SortManager sorter = new SortManager();
-        result.setSortedArray(sorter.arraySorter(tempArray, input.getSortType()));
+        result.setSortedArray(sorter.arraySorter(arrayTemp.getThisArray(), input.getSortType()));
     }
 
 
