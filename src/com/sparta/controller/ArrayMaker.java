@@ -6,7 +6,7 @@ public interface ArrayMaker {
 
     public int getArrayNumber();
 
-    public int[] arrayMade(int number);
+    public int[] arrayMade();
 
 
 
