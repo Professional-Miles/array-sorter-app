@@ -1,8 +1,8 @@
 package com.sparta.controller;
 
-import com.sparta.sorts.BubbleSort;
-import com.sparta.sorts.MergeSort;
-import com.sparta.sorts.QuickSort;
+import com.sparta.model.BubbleSort;
+import com.sparta.model.MergeSort;
+import com.sparta.model.QuickSort;
 
 public class SorterFactory implements SortFactory{
 

@@ -1,6 +1,6 @@
-package com.sparta.sorts;
+package com.sparta.model;
 
-public class BubbleSort implements SuperSorter{
+public class BubbleSort extends SuperSorter{
 
     @Override
     public void sort(int[] numbers) {

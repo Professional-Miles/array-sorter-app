@@ -1,4 +1,4 @@
-package com.sparta.sorts;
+package com.sparta.model;
 
 public interface QuickSortInterface {
 
