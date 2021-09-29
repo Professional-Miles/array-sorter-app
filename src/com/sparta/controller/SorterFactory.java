@@ -8,16 +8,13 @@ public class SorterFactory implements SortFactory{
 
     private String sorterType;
 
-    @Override
-    public void setSortType(String type) {
-        this.sorterType = type;
+    public String getSorterType() {
+        return sorterType;
     }
 
-    @Override
-    public String getSortType() {
-        return this.sorterType;
+    public void setSorterType(String sorterType) {
+        this.sorterType = sorterType;
     }
-
 
     @Override
     public int[] arraySorter(int[] numbers, String type) {

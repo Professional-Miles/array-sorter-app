@@ -1,19 +1,26 @@
 package com.sparta.controller;
 
-import java.util.Arrays;
+
 
 public class TheArray implements ArrayMaker{
 
     private int arrayNum;
+    private int thisArray;
 
-    @Override
-    public void setArrayNumber(int number) {
-        this.arrayNum = number;
+    public int getArrayNum() {
+        return arrayNum;
     }
 
-    @Override
-    public int getArrayNumber() {
-        return this.arrayNum;
+    public void setArrayNum(int arrayNum) {
+        this.arrayNum = arrayNum;
+    }
+
+    public int getThisArray() {
+        return thisArray;
+    }
+
+    public void setThisArray(int thisArray) {
+        this.thisArray = thisArray;
     }
 
     @Override
