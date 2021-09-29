@@ -2,8 +2,19 @@ package com.sparta.model;
 
 public class UserInput {
 
+    private static UserInput userInput;
     private int arraySize;
     private String sortType;
+
+    private UserInput(){
+
+    }
+
+    public static UserInput getInstance(){
+        if(userInput == null)
+            userInput = new UserInput();
+        return userInput;
+    }
 
     public int getArraySize() {
         return arraySize;
