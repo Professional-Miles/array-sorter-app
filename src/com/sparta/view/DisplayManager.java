@@ -17,7 +17,7 @@ public class DisplayManager {
         ResultFactory factory = new ResultFactory();
         UserResults result = UserResults.getInstance();
 
-        System.out.print("Enter sort type b, m, q: ");
+        System.out.print("Enter sort type character - BubbleSort(b), MergeSort(m), QuickSort(q): ");
         input.setSortType(scanner.nextLine());
 
         try {
