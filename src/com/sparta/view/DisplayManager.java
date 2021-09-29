@@ -17,6 +17,9 @@ public class DisplayManager {
         System.out.print("Enter number of ints to sort: ");
         input.setArraySize(scanner.nextInt());
 
+
+
+
     }
 
 }
