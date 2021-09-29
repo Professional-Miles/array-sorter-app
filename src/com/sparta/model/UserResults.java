@@ -4,11 +4,23 @@ import java.util.Arrays;
 
 public class UserResults {
 
+    private static UserResults userResults;
+
+    private UserResults(){
+
+    }
+
     private String sortType;
     private int arraySize;
     private int[] originalArray;
     private int[] sortedArray;
     private long sortTime;
+
+    public static UserResults getInstance(){
+        if(userResults == null)
+            userResults = new UserResults();
+        return userResults;
+    }
 
     public String getSortType() {
         return sortType;
