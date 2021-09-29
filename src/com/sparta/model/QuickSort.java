@@ -1,6 +1,6 @@
-package com.sparta.sorts;
+package com.sparta.model;
 
-public class QuickSort implements SuperSorter, QuickSortInterface {
+public class QuickSort extends SuperSorter implements QuickSortInterface {
 
     @Override
     public void quickSort(int[] numbers, int left, int right) {

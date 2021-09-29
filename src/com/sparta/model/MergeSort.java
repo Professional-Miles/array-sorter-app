@@ -1,6 +1,6 @@
-package com.sparta.sorts;
+package com.sparta.model;
 
-public class MergeSort implements SuperSorter{
+public class MergeSort extends SuperSorter{
 
     @Override
     public void sort(int[] numbers)
