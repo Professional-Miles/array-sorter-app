@@ -3,12 +3,17 @@ package com.sparta.view;
 import com.sparta.controller.ResultFactory;
 import com.sparta.model.UserInput;
 import com.sparta.model.UserResults;
+import java.util.Scanner;
 
 import java.util.InputMismatchException;
 import java.lang.NegativeArraySizeException;
-import java.util.Scanner;
+
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 
 public class DisplayManager {
+
+    private static Logger log = Logger.getLogger("Array Sorter logger.");
 
     public static void main(String[] args) {
 
@@ -16,6 +21,8 @@ public class DisplayManager {
         UserInput input = UserInput.getInstance();
         ResultFactory factory = new ResultFactory();
         UserResults result = UserResults.getInstance();
+        PropertyConfigurator.configure("log4j.properties");
+
 
         System.out.print("Enter sort type character - BubbleSort(b), MergeSort(m), QuickSort(q): ");
         input.setSortType(scanner.nextLine());
@@ -25,6 +32,7 @@ public class DisplayManager {
             input.setArraySize(scanner.nextInt());
         } catch (InputMismatchException i) {
             System.err.println("Wrong input type! Please try again...");
+            log.error("Expected an int but User has input a String.");
             System.exit(0);
         }
 
@@ -35,6 +43,7 @@ public class DisplayManager {
             factory.arrayOriginalResult();
         } catch (NegativeArraySizeException n) {
             System.err.println("Negative number input! Please try again...");
+            log.error("The array attempted to initialise with negative size.");
             System.exit(0);
         }
 
