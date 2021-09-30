@@ -1,5 +1,6 @@
 package com.sparta.controller;
 
+import com.sparta.model.BinaryTreeSort;
 import com.sparta.model.BubbleSort;
 import com.sparta.model.MergeSort;
 import com.sparta.model.QuickSort;
@@ -53,6 +54,13 @@ public class SortManager implements SortFactory{
                 QuickSort sorterQ = new QuickSort();
                 setStartTimer(System.nanoTime());
                 sorterQ.sort(numbers);
+                setStopTimer(System.nanoTime());
+                break;
+            case "t":
+                BinaryTreeSort sorterT = new BinaryTreeSort(numbers[0]);
+                setStartTimer(System.nanoTime());
+                sorterT.sort(numbers);
+                sorterT.inOrder(sorterT.node);
                 setStopTimer(System.nanoTime());
                 break;
             default:

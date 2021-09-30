@@ -24,7 +24,7 @@ public class DisplayManager {
         PropertyConfigurator.configure("log4j.properties");
 
 
-        System.out.print("Enter sort type character - BubbleSort(b), MergeSort(m), QuickSort(q): ");
+        System.out.print("Enter sort type character - BubbleSort(b), MergeSort(m), QuickSort(q), TreeSort(t): ");
         input.setSortType(scanner.nextLine());
 
         try {
