@@ -23,13 +23,16 @@ public class ResultFactory {
             case "q":
                 result.setSortType("Quick Sort");
                 break;
+            case "t":
+                result.setSortType("Binary Tree Sort");
+                break;
         }
     }
 
     public void sizeResult(){
         if (input.getArraySize() == 0){
             System.err.println("You input zero(0)! Please try again...");
-            System.exit(0);
+            System.exit(1);
         } else {
             result.setArraySize(input.getArraySize());
         }
@@ -47,7 +50,13 @@ public class ResultFactory {
     }
 
     public void arraySorterResult(){
-        result.setSortedArray(sorter.arraySorter(arrayTemp.getThisArray(), input.getSortType()));
+
+        if (input.getSortType().equals("t")){
+            System.out.println("Array sorted vertically, results in brackets.");
+            sorter.arraySorter(arrayTemp.getThisArray(),input.getSortType());
+        } else {
+            result.setSortedArray(sorter.arraySorter(arrayTemp.getThisArray(), input.getSortType()));
+        }
     }
 
     public void timerResult(){
