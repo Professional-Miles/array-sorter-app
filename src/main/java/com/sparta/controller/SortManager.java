@@ -65,7 +65,7 @@ public class SortManager implements SortFactory{
                 break;
             default:
                 System.err.println("You didn't pass a valid input! Please try again...");
-                System.exit(0);
+                System.exit(-1);
         }
         return numbers;
     }

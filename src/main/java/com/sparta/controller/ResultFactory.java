@@ -32,7 +32,7 @@ public class ResultFactory {
     public void sizeResult(){
         if (input.getArraySize() == 0){
             System.err.println("You input zero(0)! Please try again...");
-            System.exit(0);
+            System.exit(1);
         } else {
             result.setArraySize(input.getArraySize());
         }

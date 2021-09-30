@@ -33,7 +33,7 @@ public class DisplayManager {
         } catch (InputMismatchException i) {
             System.err.println("Wrong input type! Please try again...");
             log.error("Expected an int but User has input a String.");
-            System.exit(0);
+            System.exit(1);
         }
 
         factory.setTypeResult();
@@ -44,7 +44,7 @@ public class DisplayManager {
         } catch (NegativeArraySizeException n) {
             System.err.println("Negative number input! Please try again...");
             log.error("The array attempted to initialise with negative size.");
-            System.exit(0);
+            System.exit(1);
         }
 
         factory.arraySorterResult();
