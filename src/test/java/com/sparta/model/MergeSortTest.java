@@ -4,24 +4,25 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class BubbleSortTest {
+class MergeSortTest {
 
     @Test
-    void bubbleSortTestPass() {
+    void mergeSortTestPass() {
         int[] testArray = {15,30,4,22,31,70,2};
         int[] expectedArray = {2,4,15,22,30,31,70};
-        BubbleSort testB = new BubbleSort();
-        testB.sort(testArray);
+        MergeSort testM = new MergeSort();
+        testM.sort(testArray);
         assertArrayEquals(expectedArray,testArray);
     }
 
     @Test
-    void bubbleSortTestFail() {
+    void mergeSortTestFail() {
         int[] testArray = {15,30,4,22,31,70,2};
-        int[] expectedArray = {4,2,125,22,35,31,10};
-        BubbleSort testB = new BubbleSort();
-        testB.sort(testArray);
+        int[] expectedArray = {1,4,15,22,30,31,72};
+        MergeSort testM = new MergeSort();
+        testM.sort(testArray);
         assertNotEquals(expectedArray,testArray);
     }
+
 
 }
