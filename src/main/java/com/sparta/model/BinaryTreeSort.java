@@ -1,6 +1,7 @@
 package com.sparta.model;
 
 
+import java.util.Enumeration;
 
 public class BinaryTreeSort extends SuperSorter {
 
@@ -14,6 +15,30 @@ public class BinaryTreeSort extends SuperSorter {
             this.data = data;
             this.left = null;
             this.right = null;
+        }
+
+        public int getData() {
+            return data;
+        }
+
+        public void setData(int data) {
+            this.data = data;
+        }
+
+        public Node getLeft() {
+            return left;
+        }
+
+        public void setLeft(Node left) {
+            this.left = left;
+        }
+
+        public Node getRight() {
+            return right;
+        }
+
+        public void setRight(Node right) {
+            this.right = right;
         }
     }
 
@@ -51,13 +76,15 @@ public class BinaryTreeSort extends SuperSorter {
 
     public void inOrder(Node node) {
 
-        if(node != null) {
+        String output = "";
 
+        if(node != null) {
 
             inOrder(node.left);
 
             if ((node.left != null) && (node.right != null)){
                 System.out.println(node.left.data+" ("+node.data+") "+node.right.data);
+
             } else if ((node.left != null) || (node.right != null)){
                 if (node.left != null){
                     System.out.println(node.left.data+" ("+node.data+") "+null);
@@ -67,11 +94,14 @@ public class BinaryTreeSort extends SuperSorter {
 
             } else {
                 System.out.println(null+" ("+node.data+") "+null);
+
             }
 
             inOrder(node.right);
 
         }
+
+
 
     }
 
