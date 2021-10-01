@@ -26,6 +26,8 @@ public class BinaryTreeSort extends SuperSorter {
             insert(this.node, data);
         }
 
+        inOrder(this.node);
+
     }
 
     public BinaryTreeSort(int data) {

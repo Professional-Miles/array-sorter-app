@@ -60,7 +60,6 @@ public class SortManager implements SortFactory{
                 BinaryTreeSort sorterT = new BinaryTreeSort(numbers[0]);
                 setStartTimer(System.nanoTime());
                 sorterT.sort(numbers);
-                sorterT.inOrder(sorterT.node);
                 setStopTimer(System.nanoTime());
                 break;
             default:

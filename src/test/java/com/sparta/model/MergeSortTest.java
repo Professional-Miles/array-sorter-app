@@ -10,8 +10,8 @@ class MergeSortTest {
     void mergeSortTestPass() {
         int[] testArray = {15,30,4,22,31,70,2};
         int[] expectedArray = {2,4,15,22,30,31,70};
-        MergeSort testM = new MergeSort();
-        testM.sort(testArray);
+        MergeSort test = new MergeSort();
+        test.sort(testArray);
         assertArrayEquals(expectedArray,testArray);
     }
 
@@ -19,8 +19,8 @@ class MergeSortTest {
     void mergeSortTestFail() {
         int[] testArray = {15,30,4,22,31,70,2};
         int[] expectedArray = {1,4,15,22,30,31,72};
-        MergeSort testM = new MergeSort();
-        testM.sort(testArray);
+        MergeSort test = new MergeSort();
+        test.sort(testArray);
         assertNotEquals(expectedArray,testArray);
     }
 
