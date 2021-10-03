@@ -50,9 +50,7 @@ public class BinaryTreeSort extends SuperSorter {
         for (int data : numbers) {
             insert(this.node, data);
         }
-
         inOrder(this.node);
-
     }
 
     public BinaryTreeSort(int data) {
@@ -76,10 +74,7 @@ public class BinaryTreeSort extends SuperSorter {
 
     public void inOrder(Node node) {
 
-        String output = "";
-
         if(node != null) {
-
             inOrder(node.left);
 
             if ((node.left != null) && (node.right != null)){
@@ -88,6 +83,7 @@ public class BinaryTreeSort extends SuperSorter {
             } else if ((node.left != null) || (node.right != null)){
                 if (node.left != null){
                     System.out.println(node.left.data+" ("+node.data+") "+null);
+
                 } else if (node.right != null){
                     System.out.println(null+" ("+node.data+") "+node.right.data);
                 }
@@ -96,13 +92,8 @@ public class BinaryTreeSort extends SuperSorter {
                 System.out.println(null+" ("+node.data+") "+null);
 
             }
-
             inOrder(node.right);
-
         }
-
-
-
     }
 
 

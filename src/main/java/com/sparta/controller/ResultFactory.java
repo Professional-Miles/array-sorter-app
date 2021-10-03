@@ -40,7 +40,6 @@ public class ResultFactory {
     }
 
     public void arrayOriginalResult(){
-
         arrayTemp.setArrayNum(input.getArraySize());
         arrayTemp.arrayMade();
         int[] tempArray = arrayTemp.getThisArray();
