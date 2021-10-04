@@ -48,7 +48,7 @@ public class BinaryTreeSort extends SuperSorter {
         for (int data : numbers) {
             insert(this.node, data);
         }
-        inOrder(this.node);
+        //inOrder(this.node);
     }
 
     public BinaryTreeSort(int data) {
@@ -91,6 +91,13 @@ public class BinaryTreeSort extends SuperSorter {
 
             }
             inOrder(node.right);
+        }
+    }
+
+    public void inOrderNoString(Node node) {
+        if(node != null) {
+            inOrderNoString(node.left);
+            inOrderNoString(node.right);
         }
     }
 
