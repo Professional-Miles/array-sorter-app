@@ -2,9 +2,11 @@ package com.sparta.controller;
 
 import com.sparta.model.UserInput;
 import com.sparta.model.UserResults;
+import org.apache.log4j.Logger;
 
 public class ResultFactory {
 
+    private static Logger log = Logger.getLogger("ResultFactory logger.");
 
     UserInput input = UserInput.getInstance();
     UserResults result = UserResults.getInstance();
@@ -32,7 +34,8 @@ public class ResultFactory {
     public void sizeResult(){
         if (input.getArraySize() == 0){
             System.err.println("You input zero(0)! Please try again...");
-            System.exit(1);
+            log.error("The user input a (0), so there was no array ints to sort.");
+            System.exit(0);
         } else {
             result.setArraySize(input.getArraySize());
         }
@@ -40,7 +43,6 @@ public class ResultFactory {
     }
 
     public void arrayOriginalResult(){
-
         arrayTemp.setArrayNum(input.getArraySize());
         arrayTemp.arrayMade();
         int[] tempArray = arrayTemp.getThisArray();

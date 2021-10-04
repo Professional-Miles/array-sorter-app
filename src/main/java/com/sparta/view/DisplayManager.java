@@ -13,7 +13,7 @@ import org.apache.log4j.PropertyConfigurator;
 
 public class DisplayManager {
 
-    private static Logger log = Logger.getLogger("Array Sorter logger.");
+    private static Logger log = Logger.getLogger("Display Manager logger.");
 
     public static void main(String[] args) {
 
@@ -32,7 +32,7 @@ public class DisplayManager {
             input.setArraySize(scanner.nextInt());
         } catch (InputMismatchException i) {
             System.err.println("Wrong input type! Please try again...");
-            log.error("Expected an int but User has input a String.");
+            log.error("Expected an int but the user has input a String.");
             System.exit(1);
         }
 
