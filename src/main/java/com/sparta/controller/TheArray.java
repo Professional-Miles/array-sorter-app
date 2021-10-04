@@ -30,7 +30,7 @@ public class TheArray implements ArrayMaker{
 
         int[] theArray = new int[this.arrayNum];
         for(int i = 0; i <  theArray.length; i++) {
-            theArray[i] = (int)(Math.random() * 100);
+            theArray[i] = (int)((Math.random()  * 100)+1);
         }
 
         setThisArray(theArray);

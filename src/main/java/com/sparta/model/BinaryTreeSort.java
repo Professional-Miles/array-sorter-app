@@ -1,8 +1,6 @@
 package com.sparta.model;
 
 
-import java.util.Enumeration;
-
 public class BinaryTreeSort extends SuperSorter {
 
     class Node{
