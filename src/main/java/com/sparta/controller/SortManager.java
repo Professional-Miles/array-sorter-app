@@ -4,7 +4,6 @@ import com.sparta.model.*;
 import org.apache.log4j.Logger;
 
 
-
 public class SortManager implements SortFactory{
 
     private static Logger log = Logger.getLogger("SortManager logger.");
@@ -40,7 +39,7 @@ public class SortManager implements SortFactory{
     }
 
     @Override
-    public int[] arraySorter(int[] numbers, String type) {
+    public int[] arraySorter(int[] numbers, String type){
         switch (type) {
             case "b":
                 BubbleSort sorterB = new BubbleSort();

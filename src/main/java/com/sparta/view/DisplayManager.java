@@ -51,11 +51,14 @@ public class DisplayManager {
         factory.timerResult();
         System.out.println(result.toString());
 
-        System.out.print("Would you like to compare other sort methods? y or n : ");
+        System.out.print("Would you like to compare other sort methods? Yes(y) or No (n or any other value)  : ");
         input.setGoAgain(scanner.next());
 
         if (input.getGoAgain().equals("y")){
             factory.goAgainResult();
+        } else {
+            System.out.println();
+            System.out.println("Bye...");
         }
 
     }
