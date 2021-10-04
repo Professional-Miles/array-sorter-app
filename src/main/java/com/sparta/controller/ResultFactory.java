@@ -65,5 +65,36 @@ public class ResultFactory {
         result.setSortTime(sorter.getStopTimer() - sorter.getStartTimer());
     }
 
+    public void goAgainResult(){
+
+        System.out.println("-----------------------------------------------------");
+        int[] tempArrayCopy1 = new int[input.getArraySize()];
+        int[] tempArrayCopy2 = new int[input.getArraySize()];
+        int[] tempArrayCopy3 = new int[input.getArraySize()];
+        int[] tempArrayCopy4 = new int[input.getArraySize()];
+
+        System.arraycopy(result.getOriginalArray(), 0, tempArrayCopy1, 0, input.getArraySize());
+        sorter.arraySorter(tempArrayCopy1, "b");
+        timerResult();
+        System.out.println("Bubble sort time: " + result.getSortTime());
+
+        System.arraycopy(result.getOriginalArray(), 0, tempArrayCopy2, 0, input.getArraySize());
+        sorter.arraySorter(tempArrayCopy2, "m");
+        timerResult();
+        System.out.println("Merge sort time: " + result.getSortTime());
+
+        System.arraycopy(result.getOriginalArray(), 0, tempArrayCopy3, 0, input.getArraySize());
+        sorter.arraySorter(tempArrayCopy3, "q");
+        timerResult();
+        System.out.println("Quick sort time: " + result.getSortTime());
+
+        System.arraycopy(result.getOriginalArray(), 0, tempArrayCopy4, 0, input.getArraySize());
+        sorter.arraySorter(tempArrayCopy3, "t");
+        timerResult();
+        System.out.println("Binary tree sort time: " + result.getSortTime());
+
+
+    }
+
 
 }

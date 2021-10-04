@@ -1,11 +1,7 @@
 package com.sparta.controller;
 
-import com.sparta.model.BinaryTreeSort;
-import com.sparta.model.BubbleSort;
-import com.sparta.model.MergeSort;
-import com.sparta.model.QuickSort;
+import com.sparta.model.*;
 import org.apache.log4j.Logger;
-
 
 
 public class SortManager implements SortFactory{
@@ -15,6 +11,7 @@ public class SortManager implements SortFactory{
     private String sorterType;
     private long startTimer;
     private long stopTimer;
+    UserInput input = UserInput.getInstance();
 
 
     public long getStartTimer() {
@@ -42,7 +39,7 @@ public class SortManager implements SortFactory{
     }
 
     @Override
-    public int[] arraySorter(int[] numbers, String type) {
+    public int[] arraySorter(int[] numbers, String type){
         switch (type) {
             case "b":
                 BubbleSort sorterB = new BubbleSort();
@@ -66,6 +63,11 @@ public class SortManager implements SortFactory{
                 BinaryTreeSort sorterT = new BinaryTreeSort(numbers[0]);
                 setStartTimer(System.nanoTime());
                 sorterT.sort(numbers);
+                if (input.getGoAgain() == null){
+                    sorterT.inOrder(sorterT.node);
+                } else if (input.getGoAgain().equals("y")){
+                    sorterT.inOrderNoString(sorterT.node);
+                }
                 setStopTimer(System.nanoTime());
                 break;
             default:

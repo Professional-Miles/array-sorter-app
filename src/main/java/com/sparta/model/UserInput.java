@@ -5,6 +5,7 @@ public class UserInput {
     private static UserInput userInput;
     private int arraySize;
     private String sortType;
+    private String goAgain;
 
     private UserInput(){
 
@@ -30,5 +31,13 @@ public class UserInput {
 
     public void setSortType(String sortType) {
         this.sortType = sortType;
+    }
+
+    public String getGoAgain() {
+        return goAgain;
+    }
+
+    public void setGoAgain(String goAgain) {
+        this.goAgain = goAgain;
     }
 }
