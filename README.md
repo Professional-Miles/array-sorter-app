@@ -11,10 +11,6 @@ Provided is a small implementation of a program that sorts arrays. A user is giv
  - ##### Merge Sort
  - ##### Quick Sort
  - ##### Binary Tree Sort
- - ##### Array Maker
- - ##### Sort Manager
- - ##### Results Factory
- - ##### Display Manager
  - ##### Testing
  - ##### Future Additions
 
@@ -63,3 +59,29 @@ __Quick Sort Algorithm__
 ---
 
 ## Binary Tree Sort
+
+A Binary Tree is a tree data structure made up of nodes that contain data and pointers to other nodes.
+Nodes can have at most pointers to two(2) other nodes or null. A root node is assigned and based on the value of the next Node the next Node is either placed to left or right pointer of the previous node. Left for data that is lower in comparative order, right for those that are larger. This comparison starts at the root and continues until the tree is populated.
+
+For the sort to work the populated tree is then traversed over starting at the first left node and traversing left to right storing each value as you move node to node. This is due to this order of traversal matching the same order as if the array was sorted.
+
+---
+
+Other README algorithm additions to be made later.
+
+---
+
+## Testing
+
+__Bubble Sort Test Example__
+
+![Bubble Sort test example](READMEadds/BSTestexample.png)
+
+---
+
+##  Future Additions
+
+- Insertion Sorter.
+- A GUI.
+- Library sorting for comparison making use of `Collections.sort(), Arrays.sort() and Arrays.parallelSort()`.
+- Generics so users can sort types and objects other than `int`.
