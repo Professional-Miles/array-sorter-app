@@ -85,4 +85,3 @@ __Bubble Sort Test Example__
 - A GUI.
 - Library sorting for comparison making use of `Collections.sort(), Arrays.sort() and Arrays.parallelSort()`.
 - Generics so users can sort types and objects other than `int`.
-- 
